@@ -13,5 +13,7 @@ Nociones basicas git/github
 - Sincronización del repo local con el remoto
 - Creacion de ramas.
 
+[Carpeta de la clase](https://github.com/GuidoCarda/daw-uai/tree/main/clase%2001)
+
 Docente: Ing. Dario Marañes.
 UAI - 2024
