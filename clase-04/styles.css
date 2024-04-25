@@ -1,0 +1,165 @@
+html {
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  width: min(1080px, 100%);
+  margin: auto;
+}
+
+header {
+  background: #0a0a23;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  inset: auto 0;
+}
+
+main {
+  padding-top: 100px;
+}
+
+header nav {
+  position: relative;
+  padding-inline: 20px;
+}
+
+.site-nav-logo {
+  display: inline-block;
+  width: 210px;
+  height: 24px;
+}
+
+header ul {
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  right: 0;
+  display: inline-block;
+}
+
+header ul li {
+  display: inline-block;
+}
+
+header ul li ~ li {
+  padding-left: 24px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+header .donate {
+  color: black;
+  padding: 0 14px;
+  outline: 0;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-left: auto;
+  height: 30px;
+  line-height: 24px;
+  text-decoration: none;
+  background-color: #feac32;
+  background-image: linear-gradient(#fecc4c, #ffac33);
+  border: 3px solid #feac32;
+}
+
+input[type="search"] {
+  display: none;
+  background: #3b3b4f;
+  border: none;
+  width: 20%;
+  height: 26px;
+  outline: none;
+}
+
+@media (min-width: 1080px) {
+  input[type="search"] {
+    display: inline-block;
+  }
+}
+
+.charity {
+  background: #002ead;
+  font-weight: bold;
+  padding-block: 12px;
+  display: block;
+  font-size: 17px;
+  width: full;
+  text-align: center;
+}
+
+.charity span {
+  text-decoration: underline;
+}
+
+.charity:hover span {
+  text-decoration: none;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 50px;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: rgb(59, 59, 79);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.tag-link {
+  text-transform: uppercase;
+  font-size: 14px;
+  text-decoration: none;
+  color: #002ead;
+}
+
+.author-details {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 16px;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.profile-img {
+  height: 60px;
+  width: 60px;
+}
+
+.post-img {
+  width: 100%;
+}
+
+/* Indice */
+
+.table-of-contents {
+  font-size: 22px;
+  line-height: 1.8;
+}
+
+.table-of-contents h2 {
+  margin-bottom: 0;
+  line-height: 1;
+  font-size: 28px;
+}
+
+.table-of-contents ol {
+  margin: 0;
+}
+
+.table-of-contents a {
+  color: black;
+}
+
+code {
+  background: lightgray;
+  padding-inline: 4px;
+}

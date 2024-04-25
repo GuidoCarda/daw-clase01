@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>doguinews</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <input type="search" placeholder="Search +11,000 tutorials" />
+        <img
+          class="site-nav-logo"
+          src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg"
+          alt=""
+        />
+        <ul>
+          <li><a href="index.html">Forum</a></li>
+          <li><a href="form.html">Contact us</a></li>
+          <li><a href="form.html" class="donate">Donate</a></li>
+        </ul>
+      </nav>
+      <a href="" class="charity"
+        >Support our charity and our mission.
+        <span>Donate to freeCodeCamp.org</span></a
+      >
+    </header>
+    <main class="container">
+      <section class="">
+        <div class="post-meta">
+          <p>MARCH 27, 2024 /</p>
+          <a
+            class="tag-link"
+            href="https://www.freecodecamp.org/news/tag/react/"
+            >#React</a
+          >
+        </div>
+        <h1>New Features in React 19 – Updates with Code Examples</h1>
+        <div class="author-details">
+          <img
+            class="profile-img"
+            src="https://avatars.githubusercontent.com/u/78933518?v=4"
+            alt="author profile picture"
+          />
+          <p>Guido Cardarelli</p>
+        </div>
+        <img
+          src="https://www.freecodecamp.org/news/content/images/size/w2000/2024/03/Group-27.png"
+          alt=""
+          width="100%"
+        />
+      </section>
+      <section class="table-of-contents">
+        <h2>Here's what we'll cover:</h2>
+        <ol>
+          <li><a href="#1-react-compiler">React Compiler</a></li>
+          <li><a href="#2-server-components">Server Components</a></li>
+          <li><a href="#3-actions">Actions</a></li>
+          <li><a href="#4-web-components">Web Components</a></li>
+          <li><a href="#5-document-metadata">Document Metadata</a></li>
+          <li><a href="#6-assets-loading">Asset Loading</a></li>
+          <li>
+            <a href="#7-new-react-hooks">New React Hooks</a>
+            <ul>
+              <li>The new <code>use()</code> hook</li>
+              <li>The <code>useFormStatus()</code> hook</li>
+              <li>The <code>useFormState()</code> hook</li>
+              <li>The <code>useOptimistic()</code> hook</li>
+            </ul>
+          </li>
+          <li><a href="#8-can-i-use">Can I use React 19 Now?</a></li>
+          <li><a href="#9-summary">Summary</a></li>
+        </ol>
+      </section>
+      <section>
+        <h2 id="1-react-compiler">1- React Compiler</h2>
+        <p>
+          Currently, React doesn't automatically re-render on state change. A
+          way to optimise these re-renders is to manually use useMemo(),
+          useCallback(), and memo APIs. As per React's team, this was a
+          "reasonable manual compromise". Their vision was to let React manage
+          these re-renders.
+        </p>
+        <p>
+          But the React team realized that manual optimisation is cumbersome,
+          and the feedback from the community encouraged them to solve this
+          issue.
+        </p>
+        <p>
+          And so the React Team has created the "React compiler". The React
+          compiler will now manage these re-renders. React will decide
+          automatically how and when to change the state and update the UI.
+        </p>
+        <p>
+          With this, we developers don't need to do this manually anymore. It
+          also means no need to use useMemo(), useCallback(), and memo.
+        </p>
+        <p>
+          While this will be released in an upcoming version of React, you can
+          learn more about the compiler from these resources:
+        </p>
+        <a href="https://youtu.be/kjOacmVsLSE?si=dqCjg0_9x2hOB8BF"
+          >React compiler video</a
+        >
+        <p>
+          React will decide which components to optimise and when, along with
+          what to re-render.
+        </p>
+
+        <h2 id="#2-server-components">2- Server components</h2>
+        <p>
+          If you haven't heard about server components yet, you're missing out
+          on one of the most exciting developments in React and Next.js.
+        </p>
+
+        <p>
+          Up until now, React components have primarily run on the client side.
+          But React is introducing the groundbreaking concept of running
+          components on the server side.
+        </p>
+
+        <p>
+          The idea of server components has been circulating for years, with
+          Next.js being the pioneer in implementing them for production.
+          Starting from Next.js 13, all components are server components by
+          default. To make a component run on the client side, you need to use
+          the "use client" directive.
+        </p>
+
+        <p>
+          In React 19, server components will be integrated directly into React,
+          bringing a host of advantages:
+        </p>
+
+        <ul>
+          <li>
+            <strong>SEO:</strong> Server-rendered components enhance search
+            engine optimisation by providing more accessible content to web
+            crawlers.
+          </li>
+          <li>
+            <strong>Performance Boost:</strong> Server components contribute to
+            faster initial page loads and improved overall performance,
+            particularly for content-heavy applications.
+          </li>
+          <li>
+            <strong>Server-Side Execution:</strong> Server components enable
+            executing code on the server, making tasks like API calls seamless
+            and efficient.
+          </li>
+        </ul>
+
+        <p>
+          These advantages underscore the transformative potential of server
+          components in modern web development.
+        </p>
+
+        <h2 id="3-actions">3- Actions</h2>
+        <p>
+          In version 19, another exciting addition will be Actions. This is
+          going to be a game-changer for how we work with forms.
+        </p>
+        <p>
+          Actions will let you integrate actions with the HTML tag
+          <code>&ltform /&gt</code>. In simpler terms, you'll be able to replace
+          the <code>onSubmit</code> event with Actions. These actions are HTML
+          form attributes.
+        </p>
+
+        <p>
+          With the introduction of server components, Actions can be executed on
+          the server side. In our JSX, with <code>&ltform/&gt</code>, we can
+          drop the onSubmit event and use the action attribute. The value of the
+          action attribute will be a method to submit the data either on the
+          client or server side.
+        </p>
+        <p>
+          You can execute both synchronous and asynchronous operations with
+          actions, streamlining data submission management and state updates.
+          The goal is to make the working with forms and handling data easier.
+        </p>
+
+        <p>Let's look at an example to see how this works:</p>
+        <pre>
+          <code>
+          "use server"
+
+          const submitData = async (userData) => {
+              const newUser = {
+                  username: userData.get('username'),
+                  email: userData.get('email')
+              }
+              console.log(newUser)
+          }
+         </code>
+        </pre>
+        <pre>
+          <code>
+            const Form = () =&gt; {
+              return &lt;form action={submitData}&gt;
+                  &lt;div&gt;
+                      &lt;label&gt;Name&lt;/label&gt;
+                      &lt;input type="text" name='username'/&gt;
+                  &lt;/div&gt;
+                  &lt;div&gt;
+                      &lt;label&gt;Name&lt;/label&gt;
+                      &lt;input type="text" name="email" /&gt;
+                  &lt;/div&gt;
+                  &lt;button type='submit'&gt;Submit&lt;/button&gt;
+              &lt;/form&gt;
+         </code>
+        </pre>
+
+        <p>
+          In the above code, submitData is the action in the server component.
+          form is a client side component which is using the submitData as
+          action. submitData will be execute on the server. The communication of
+          the client (form), and server (submitData) components is only possible
+          because of the action attribute.
+        </p>
+
+        <h2 id="4-web-components">4- Web components</h2>
+
+        <p>
+          Web components allow you to create custom components using native
+          HTML, CSS, and JavaScript, seamlessly incorporating them into your web
+          applications as if they were standard HTML tags. Pretty amazing,
+          right?
+        </p>
+
+        <p>
+          Currently, integrating web components into React isn't
+          straightforward. Typically, you either need to convert the web
+          component to a React component or install extra packages and write
+          additional code to make web components work with React. This can be
+          frustrating.
+        </p>
+
+        <p>
+          Luckily, React 19 will help you integrate web components into your
+          React code much more easily. If you come across a really useful web
+          component, such as a carousel, you can seamlessly incorporate it into
+          your React projects without the need to convert it into React code.
+        </p>
+
+        <p>
+          This streamlines development and allows you to leverage the vast
+          ecosystem of existing web components in your React applications.
+        </p>
+
+        <h2 id="5-document-metadata">5- Document metadata</h2>
+        <p>
+          Elements like "title," "meta tags," and "description" are crucial in
+          optimising SEO and ensuring accessibility. In React, where single-page
+          applications are prevalent, managing these elements across different
+          routes can be a bit of a hassle.
+        </p>
+
+        <p>
+          Currently, developers often resort to writing custom code, or using
+          packages like react-helmet to handle route changes and update metadata
+          accordingly. This process can be repetitive and error-prone,
+          especially when dealing with SEO-sensitive elements like meta tags.
+        </p>
+
+        <p>
+          With React19, we can use the title and meta tags directly in our React
+          components:
+        </p>
+
+        <pre>
+          <code>
+            Const HomePage = () =&gt; {
+              return (
+                &lt;&gt;
+                  &lt;title&gt;Freecodecamp&lt;/title&gt;
+                  &lt;meta name="description" content="Freecode camp blogs" /&gt;
+                  // Page content
+                &lt;/&gt;
+              );
+            }
+          </code>
+        </pre>
+
+        <h2 id="6-asset-loading">6-Asset Loading</h2>
+
+        <p>
+          In React, you'll need to carefully manage the loading experience and
+          performance of your applications, particularly with images and other
+          asset files.
+        </p>
+
+        <p>
+          Often, the view renders first in the browser, followed by stylesheets,
+          fonts, and images. This can result in a flicker from non-styled (or
+          flash of unstyled content) to a styled view.
+        </p>
+
+        <p>
+          To mitigate this issue, developers often resort to adding custom code
+          to detect when these assets are ready, ensuring that the view is
+          displayed only after everything has loaded.
+        </p>
+
+        <p>
+          In React 19, images and other files will load in the background as
+          users explore the current page. This improvement should help improve
+          page load times and reduce waiting periods.
+        </p>
+
+        <p>
+          Also, React is introducing lifecycle Suspense for assets loading,
+          including scripts, stylesheets, and fonts. This feature enables React
+          to determine when the content is ready to be displayed, eliminating
+          any "unstyled" flickering.
+        </p>
+
+        <p>
+          There are new Resource Loading APIs like preload and preinit to
+          provide greater control for when a resource should load and
+          initialise.
+        </p>
+
+        <p>
+          By allowing assets to load asynchronously in the background, React 19
+          minimizes waiting times and ensures that users can interact with the
+          conatent without interruptions. This optimization not only enhances
+          the performance of React applications but also contributes to a more
+          enjoyable browsing experience for users.
+        </p>
+
+        <h2 id="7-new-react-hooks">7- New React Hooks</h2>
+
+        <h3>The new <code>use()</code> hook</h3>
+        <p>
+          React19 will introduce a new hook called use(). This hook will
+          simplify how we use promises, async code, and context.
+        </p>
+
+        <h3>The <code>useFormStatus()</code> hook</h3>
+        <p>
+          This new hook in React19 will help you have more control over the
+          forms you create. It will give you status information about the last
+          form submission.
+        </p>
+
+        <h3>The <code>useFormState()</code> hook</h3>
+        <p>
+          Another new hook in React19 is useFormState. It allows you to update
+          state based on the result of a form submission.
+        </p>
+
+        <h3>The <code>useOptimistic()</code> hook</h3>
+        <p>
+          useOptimistic is a React Hook that lets you show a different state
+          while an async action is underway, according to the React docs.
+        </p>
+
+        <p>
+          This hook will help enhance the user experience and should result in
+          faster responses. This will be useful for applications that need to
+          interact with the server.
+        </p>
+
+        <h2 id="8-can-i-use">8-Can I use React 19 now?</h2>
+        Can I Use React 19 Now?
+        <p>
+          As of now, all the features mentioned above are available in the
+          canary release. You can learn more here. As suggested by the React
+          team, do not use these for customer/user facing apps at the moment.
+          Feel free to play around for your own learning, or for fun only.
+        </p>
+
+        <p>
+          If you're wondering when React19 is scheduled to release, you can
+          follow the
+          <a href="https://react.dev/blog/2023/05/03/react-canaries"
+            >Canary Releases</a
+          >
+          for updates.
+        </p>
+
+        <h2 id="9-summary">9- Summary</h2>
+        <p>
+          We've covered a lot in this article. Here's a quick summary of the
+          exciting changes coming to React v19:
+        </p>
+        <ul>
+          <li>
+            🤖 There will be a new React compiler that will be introduced in a
+            future version of React.
+          </li>
+          <li>
+            🙌🏽 We'll now have auto re-rendering, memoization, and optimisation
+            of state and UI.
+          </li>
+          <li>
+            🔮 There will be some new hooks like use() that will help simplify
+            promises and async code.
+          </li>
+          <li>⚙️ There will now be server side component support in React.</li>
+          <li>
+            📝 We'll have better form handling using actions, useFormStatus(),
+            useStatusForm(), and useOptimistic().
+          </li>
+          <li>
+            🖼 React will optimise asset loading to enhance performance by using
+            suspense under the hood.
+          </li>
+          <li>🔗 We'll have web component integration in React.</li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <span>Doguinews 2024</span>
+      <a href="https://github.com/guidocarda" target="_blank"
+        >Guido Cardarelli</a
+      >
+    </footer>
+  </body>
+</html>
