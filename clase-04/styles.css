@@ -1,0 +1,412 @@
+html {
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  width: min(1060px, 100%);
+  margin: auto;
+}
+
+.go-to-source {
+  position: absolute;
+  display: block;
+  text-decoration: none;
+  color: rgb(216, 216, 216);
+  top: 120px;
+  right: 40px;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: all 200ms;
+  padding: 16px 24px;
+  border-radius: 8px;
+}
+
+.go-to-source:hover {
+  color: rgb(118, 118, 118);
+  border: 1px solid rgba(0, 0, 0, 0.094);
+}
+
+.go-to-source:hover svg {
+  color: rgb(127, 141, 224);
+}
+
+.go-to-source svg {
+  height: 32px;
+  width: 32px;
+}
+
+.go-to-source span {
+  display: block;
+}
+
+header {
+  background: #0a0a23;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  overflow: hidden;
+  inset: auto 0;
+}
+
+main {
+  padding-top: 124px;
+}
+
+nav {
+  position: relative;
+  padding-inline: 20px;
+  height: 38px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  height: 100%;
+  display: inline-block;
+}
+
+nav ul li {
+  display: inline-block;
+  height: 100%;
+}
+
+nav ul li ~ li {
+  margin-left: 18px;
+  height: 100%;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  vertical-align: top;
+  background: rgb(22, 17, 17);
+  display: inline-block;
+  line-height: 38px;
+  padding-inline: 16px;
+  height: 100%;
+}
+
+nav ul li a:hover {
+  color: black;
+  background: white;
+}
+
+.site-nav-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 24px;
+  width: 240px;
+}
+
+header .donate {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #feac32;
+  background-image: linear-gradient(#fecc4c, #ffac33);
+  border: 3px solid #feac32;
+  height: 22px;
+  color: black;
+  padding: 0 14px;
+  line-height: 20px;
+  margin-block: 5px;
+}
+
+header .donate:hover {
+  background-color: #fecc4c;
+  border-width: 3px;
+  border-color: #f1a02a;
+  background-image: none;
+  color: var(--theme-color);
+  text-decoration: none;
+}
+
+.search-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 29%;
+  margin-left: 6px;
+  vertical-align: top;
+}
+
+.search-wrapper svg {
+  position: absolute;
+  color: rgb(175, 175, 179);
+  top: 10px;
+  left: 6px;
+  height: 18px;
+  width: 18px;
+  z-index: 1;
+}
+
+.search-wrapper input[type="search"] {
+  background: #3b3b4f;
+  color: white;
+  padding-inline-start: 30px;
+  border: none;
+  margin: 0;
+  position: relative;
+  top: 0;
+  font-size: 18px;
+  width: 100%;
+  height: 26px;
+  margin-block: 6px;
+  line-height: 1;
+  outline: none;
+}
+
+::placeholder {
+  font-size: 18px;
+  color: #b2b2ba;
+  opacity: 1; /* Firefox */
+}
+
+.search-wrapper input[type="search"]::placeholder {
+  padding-left: 12px;
+}
+
+.charity-banner {
+  background: #002ead;
+  font-weight: bold;
+  color: white;
+  padding-block: 12px;
+  display: block;
+  font-size: 17px;
+  width: 100%;
+  text-align: center;
+}
+
+.charity-banner span {
+  text-decoration: underline;
+}
+
+.charity-banner:hover span {
+  text-decoration: none;
+}
+
+/* Post header */
+h1 {
+  margin-top: 0;
+  font-size: 50px;
+  margin-bottom: 56px;
+}
+
+.post-meta {
+  color: rgb(59, 59, 79);
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.post-meta > * {
+  display: inline-block;
+}
+
+.tag-link {
+  padding-left: 2px;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-decoration: none;
+  color: #002ead;
+}
+
+/* Post author */
+.author-card {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.author-card .profile-img {
+  height: 60px;
+  width: 60px;
+}
+
+.author-card .author {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+.author-card .author:first-of-type {
+  position: absolute;
+  margin-left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+section.author-card {
+  border-block: 1px solid rgb(225, 225, 225);
+  padding-block: 50px;
+  margin-top: 60px;
+}
+
+.author-card:last-of-type div {
+  position: abolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  margin-left: 16px;
+}
+
+.author-card:last-of-type div .author {
+  margin-left: 0;
+  padding-bottom: 20px;
+  display: block;
+  width: max-content;
+  line-break: none;
+}
+
+.author-card:last-of-type div p {
+  position: relative;
+  top: 20px;
+  color: gray;
+}
+
+.author-card:last-of-type div p a {
+  color: grey;
+}
+
+.post-img {
+  width: 100%;
+  padding-bottom: 70px;
+}
+
+/* Index  & summary */
+.summary-list,
+.table-of-contents {
+  font-size: 22px;
+  line-height: 1.8;
+}
+
+.summary-list {
+  max-width: 50ch;
+}
+
+.summary-list code {
+  color: #0a0a23;
+}
+
+.table-of-contents h2 {
+  margin-bottom: 0;
+  line-height: 1;
+  font-size: 28px;
+}
+
+.table-of-contents ol {
+  margin: 0;
+}
+
+.table-of-contents a {
+  color: black;
+}
+
+/* Article content */
+
+.intro p:first-of-type {
+  font-size: 28px;
+  line-height: 41px;
+  margin-bottom: 41.25px;
+  max-width: 45ch;
+  text-align: pretty;
+  margin-top: 0;
+}
+
+.intro p,
+.content p {
+  font-size: 22px;
+  line-height: 35px;
+  max-width: 56ch;
+}
+
+.content h2 {
+  font-size: 38px;
+  font-weight: 800;
+}
+
+code {
+  background: lightgray;
+  padding-inline: 4px;
+}
+
+.codeblock {
+  background: #eeeef0;
+  display: block;
+  width: 100%;
+  padding: 16px;
+}
+
+footer {
+  background: #eeeef0;
+  text-align: center;
+  padding: 40px 15px;
+  margin-top: 60px;
+}
+
+footer h3 {
+  font-size: 16px;
+}
+
+footer span:last-of-type {
+  margin-top: 40px;
+  display: block;
+  color: gray;
+}
+
+.top-footer .col {
+  width: 40%;
+  display: inline-block;
+}
+
+.top-footer .col:first-of-type {
+  text-align: start;
+  vertical-align: top;
+  max-width: 60ch;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.trending-guides-articles {
+  columns: 3;
+  list-style: none;
+  text-align: start;
+}
+
+.trending-guides-articles a {
+  text-decoration: none;
+  color: rgb(50, 50, 50);
+  white-space: nowrap;
+  line-height: 2;
+}
+
+.trending-guides-articles a:hover {
+  text-decoration: underline;
+}
+
+.mobile-apps-wrapper {
+  margin-top: 40px;
+  width: 100%;
+}
+
+.apps {
+  list-style: none;
+}
+
+.apps li {
+  display: inline-block;
+}
+
+.apps li + li {
+  padding-left: 30px;
+}
+
+.apps img {
+  height: 70px;
+  width: 180px;
+  object-fit: cover;
+}
