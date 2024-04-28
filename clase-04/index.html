@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml" />
+    <link
+      rel="icon"
+      href="https://cdn.freecodecamp.org/universal/favicons/favicon.ico"
+      sizes="any"
+      type="image/svg+xml"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,32 +17,92 @@
     />
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="styles.css" />
-    <title>doguinews</title>
+    <title>New React 19 Features</title>
   </head>
   <body>
     <header>
       <nav>
-        <input type="search" placeholder="Search +11,000 tutorials" />
-        <img
-          class="site-nav-logo"
-          src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg"
-          alt=""
-        />
+        <div class="search-wrapper">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-search"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+            <path d="M21 21l-6 -6" />
+          </svg>
+          <input type="search" placeholder="Search 11,000+ tutorials" />
+        </div>
+        <a href="https://www.freecodecamp.org/news/">
+          <img
+            class="site-nav-logo"
+            src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg"
+            alt=""
+          />
+        </a>
         <ul>
-          <li><a href="index.html">Forum</a></li>
-          <li><a href="form.html">Contact us</a></li>
-          <li><a href="form.html" class="donate">Donate</a></li>
+          <li><a href="https://forum.freecodecamp.org/">Forum</a></li>
+          <li>
+            <a
+              href="https://www.freecodecamp.org/donate"
+              target="_blank"
+              class="donate"
+              >Donate</a
+            >
+          </li>
         </ul>
       </nav>
-      <a href="" class="charity"
+      <a
+        href="https://www.freecodecamp.org/donate"
+        target="_blank"
+        class="charity-banner"
         >Support our charity and our mission.
         <span>Donate to freeCodeCamp.org</span></a
       >
     </header>
     <main class="container">
-      <section class="">
+      <a
+        class="go-to-source"
+        href="https://www.freecodecamp.org/news/new-react-19-features"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-world-www"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M19.5 7a9 9 0 0 0 -7.5 -4a8.991 8.991 0 0 0 -7.484 4" />
+          <path d="M11.5 3a16.989 16.989 0 0 0 -1.826 4" />
+          <path d="M12.5 3a16.989 16.989 0 0 1 1.828 4" />
+          <path d="M19.5 17a9 9 0 0 1 -7.5 4a8.991 8.991 0 0 1 -7.484 -4" />
+          <path d="M11.5 21a16.989 16.989 0 0 1 -1.826 -4" />
+          <path d="M12.5 21a16.989 16.989 0 0 0 1.828 -4" />
+          <path d="M2 10l1 4l1.5 -4l1.5 4l1 -4" />
+          <path d="M17 10l1 4l1.5 -4l1.5 4l1 -4" />
+          <path d="M9.5 10l1 4l1.5 -4l1.5 4l1 -4" />
+        </svg>
+        <span>Articulo original</span>
+      </a>
+
+      <!-- Article hero  -->
+      <section>
         <div class="post-meta">
-          <p>MARCH 27, 2024 /</p>
+          <span>MARCH 27, 2024 /</span>
           <a
             class="tag-link"
             href="https://www.freecodecamp.org/news/tag/react/"
@@ -45,20 +110,55 @@
           >
         </div>
         <h1>New Features in React 19 – Updates with Code Examples</h1>
-        <div class="author-details">
+        <div class="author-card">
           <img
             class="profile-img"
             src="https://avatars.githubusercontent.com/u/78933518?v=4"
             alt="author profile picture"
           />
-          <p>Guido Cardarelli</p>
+          <a href="https://github.com/guidocarda" target="_blank" class="author"
+            >Guido Cardarelli</a
+          >
         </div>
         <img
+          class="post-img"
           src="https://www.freecodecamp.org/news/content/images/size/w2000/2024/03/Group-27.png"
           alt=""
-          width="100%"
         />
       </section>
+
+      <section class="intro">
+        <p>
+          ReactJS is one of the most popular UI libraries in the front-end
+          development world. And one of the reasons I love React is because of
+          the team behind it and the community's enthusiasm for it.
+        </p>
+
+        <p>
+          And when the community speaks up about the need for new features and
+          improvements, the team listens.
+        </p>
+
+        <p>
+          The future of React is exciting and interesting. If I had to summarise
+          it in one line, I'd say this pretty much sums it up: 'Write Less, Do
+          More.'
+        </p>
+
+        <p>
+          In this article, I will share what's new in React 19 so you can start
+          experimenting with some of the features and learn about what's
+          changing.
+        </p>
+
+        <p>
+          Just keep in mind that as I write this, React 19 is still work in
+          progress. Make sure you follow the official guide on GitHub and the
+          official team on social media to stay updated with the latest
+          developments.
+        </p>
+      </section>
+
       <section class="table-of-contents">
         <h2>Here's what we'll cover:</h2>
         <ol>
@@ -81,8 +181,9 @@
           <li><a href="#9-summary">Summary</a></li>
         </ol>
       </section>
-      <section>
-        <h2 id="1-react-compiler">1- React Compiler</h2>
+
+      <section class="content">
+        <h2 id="1-react-compiler">🤖 🤖 React Compiler 🤖 🤖</h2>
         <p>
           Currently, React doesn't automatically re-render on state change. A
           way to optimise these re-renders is to manually use useMemo(),
@@ -116,7 +217,7 @@
           what to re-render.
         </p>
 
-        <h2 id="#2-server-components">2- Server components</h2>
+        <h2 id="#2-server-components">🔥🔥 Server components 🔥🔥</h2>
         <p>
           If you haven't heard about server components yet, you're missing out
           on one of the most exciting developments in React and Next.js.
@@ -164,7 +265,7 @@
           components in modern web development.
         </p>
 
-        <h2 id="3-actions">3- Actions</h2>
+        <h2 id="3-actions">💪💪 Actions 💪💪</h2>
         <p>
           In version 19, another exciting addition will be Actions. This is
           going to be a game-changer for how we work with forms.
@@ -191,7 +292,7 @@
 
         <p>Let's look at an example to see how this works:</p>
         <pre>
-          <code>
+          <code class="codeblock">
           "use server"
 
           const submitData = async (userData) => {
@@ -204,7 +305,7 @@
          </code>
         </pre>
         <pre>
-          <code>
+          <code class="codeblock">
             const Form = () =&gt; {
               return &lt;form action={submitData}&gt;
                   &lt;div&gt;
@@ -228,7 +329,7 @@
           because of the action attribute.
         </p>
 
-        <h2 id="4-web-components">4- Web components</h2>
+        <h2 id="4-web-components">⚙️⚙️ Web components ⚙️⚙️</h2>
 
         <p>
           Web components allow you to create custom components using native
@@ -257,7 +358,7 @@
           ecosystem of existing web components in your React applications.
         </p>
 
-        <h2 id="5-document-metadata">5- Document metadata</h2>
+        <h2 id="5-document-metadata">🌇🌇 Document metadata 🌇🌇</h2>
         <p>
           Elements like "title," "meta tags," and "description" are crucial in
           optimising SEO and ensuring accessibility. In React, where single-page
@@ -278,7 +379,7 @@
         </p>
 
         <pre>
-          <code>
+          <code class="codeblock">
             Const HomePage = () =&gt; {
               return (
                 &lt;&gt;
@@ -291,7 +392,7 @@
           </code>
         </pre>
 
-        <h2 id="6-asset-loading">6-Asset Loading</h2>
+        <h2 id="6-asset-loading">💼💼 Asset Loading 💼💼</h2>
 
         <p>
           In React, you'll need to carefully manage the loading experience and
@@ -372,7 +473,6 @@
         </p>
 
         <h2 id="8-can-i-use">8-Can I use React 19 now?</h2>
-        Can I Use React 19 Now?
         <p>
           As of now, all the features mentioned above are available in the
           canary release. You can learn more here. As suggested by the React
@@ -389,12 +489,12 @@
           for updates.
         </p>
 
-        <h2 id="9-summary">9- Summary</h2>
+        <h2 id="9-summary">🌟 Summary</h2>
         <p>
           We've covered a lot in this article. Here's a quick summary of the
           exciting changes coming to React v19:
         </p>
-        <ul>
+        <ol class="summary-list">
           <li>
             🤖 There will be a new React compiler that will be introduced in a
             future version of React.
@@ -404,27 +504,341 @@
             of state and UI.
           </li>
           <li>
-            🔮 There will be some new hooks like use() that will help simplify
-            promises and async code.
+            🔮 There will be some new hooks like <code>use()</code> that will
+            help simplify promises and async code.
           </li>
           <li>⚙️ There will now be server side component support in React.</li>
           <li>
-            📝 We'll have better form handling using actions, useFormStatus(),
-            useStatusForm(), and useOptimistic().
+            📝 We'll have better form handling using actions,
+            <code>useFormStatus()</code>, <code>useStatusForm()</code>, and
+            <code>useOptimistic()</code>.
           </li>
           <li>
             🖼 React will optimise asset loading to enhance performance by using
             suspense under the hood.
           </li>
           <li>🔗 We'll have web component integration in React.</li>
-        </ul>
+        </ol>
+      </section>
+
+      <section class="author-card">
+        <img
+          class="profile-img"
+          src="https://avatars.githubusercontent.com/u/78933518?v=4"
+          alt="author profile picture"
+        />
+        <div>
+          <a href="https://github.com/guidocarda" target="_blank" class="author"
+            >Guido Cardarelli</a
+          >
+          <p>
+            Read
+            <a target="_blank" href="https://github.com/guidocarda"
+              >more posts</a
+            >.
+          </p>
+        </div>
       </section>
     </main>
     <footer>
-      <span>Doguinews 2024</span>
-      <a href="https://github.com/guidocarda" target="_blank"
-        >Guido Cardarelli</a
-      >
+      <section class="top-footer">
+        <div class="col">
+          <p>
+            freeCodeCamp is a donor-supported tax-exempt 501(c)(3) charity
+            organization (United States Federal Tax Identification Number:
+            82-0779546)
+          </p>
+
+          <p>
+            Our mission: to help people learn to code for free. We accomplish
+            this by creating thousands of videos, articles, and interactive
+            coding lessons - all freely available to the public.
+          </p>
+
+          <p>
+            Donations to freeCodeCamp go toward our education initiatives, and
+            help pay for servers, services, and staff.
+          </p>
+        </div>
+        <div class="col">
+          <h3>Trending guides</h3>
+          <ul class="trending-guides-articles">
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/how-to-format-a-date-with-javascript-date-formatting-in-js/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Date Formatting in JS
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/java-iterator-hashmap-how-to-iterate-through-a-hashmap-with-a-loop/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Java Iterator Hashmap
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/git-abort-merge-how-to-cancel-a-merge-in-git/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Cancel a Merge in Git
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/what-is-a-linked-list-types-and-examples/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >What is a Linked List?
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/how-to-install-java-in-ubuntu/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Install Java in Ubuntu
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/python-tenary-operator/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Python Ternary Operator
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/full-stack-engineer-career-guide/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Full Stack Career Guide
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/python-sort-dictionary-by-key/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Python Sort Dict by Key
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/smart-quotes-single-quote-and-double-quotation-mark-for-copy-paste/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Smart Quotes Copy/Paste
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/javascript-array-length-tutorial/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >JavaScript Array Length
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/how-to-use-sets-in-python/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Sets in Python
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/kotlin-vs-java/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Kotlin vs Java
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/sql-temp-table-how-to-create-a-temporary-sql-table/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >SQL Temp Table
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/how-to-use-html-forms/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >HTML Form Basics
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/how-to-add-a-multiline-comment-in-yaml/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Comments in YAML
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/pandas-count-rows-how-to-get-the-number-of-rows-in-a-dataframe/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Pandas Count Rows
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/python-end-program-how-to-exit-a-python-program-in-terminal/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Python End Program
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/xor-py-how-the-python-xor-operator-works/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Python XOR Operator
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/how-to-check-if-a-key-exists-in-a-dictionary-in-python/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Python Dict Has Key
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/python-list-to-string-how-to-convert-lists-in-python/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Python List to String
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/python-exit-how-to-use-an-exit-function-in-python-to-stop-a-program/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Exit Function in Python
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/string-to-array-in-java-how-to-convert-a-string-to-an-array-in-java/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >String to Array in Java
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/python-import-from-file-importing-local-files-in-python/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Python Import from File
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/how-to-parse-a-string-in-python/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Parse a String in Python
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/python-merge-dictionaries-merging-two-dicts-in-python/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Python Merge Dictionaries
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/how-to-copy-a-directory-in-linux-with-the-cp-command/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Copy a Directory in Linux
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/reactive-programming-beginner-guide/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Reactive Programming Guide
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/how-to-center-text-vertically-with-css/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Center Text Vertically CSS
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/greedy-algorithms/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >What’s a Greedy Algorithm?
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/how-to-edit-git-commit-messages-with-git-amend/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Edit Commit Messages in Git
+              </a>
+            </li>
+          </ul>
+
+          <div class="mobile-apps-wrapper">
+            <h3>Mobile App</h3>
+            <ul class="apps">
+              <li>
+                <a
+                  href="https://apps.apple.com/us/app/freecodecamp/id6446908151?itsct=apps_box_link&amp;itscg=30200"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <img
+                    src="https://cdn.freecodecamp.org/platform/universal/apple-store-badge.svg"
+                    lang="en"
+                    alt="Download on the App Store"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://play.google.com/store/apps/details?id=org.freecodecamp"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <img
+                    src="https://cdn.freecodecamp.org/platform/universal/google-play-badge.svg"
+                    lang="en"
+                    alt="Get it on Google Play"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <span>DAW-UAI - Cardarelli Guido - 2024</span>
     </footer>
   </body>
 </html>
