@@ -74,6 +74,44 @@ nav ul {
   display: inline-block;
 }
 
+nav .hamburguer {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  height: 38px;
+  padding-block: 7px;
+  right: 30px;
+  color: white;
+  display: inline-block;
+  transition: all 200ms;
+}
+
+nav .hamburguer:hover {
+  background: white;
+  color: black;
+}
+
+nav ul {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  nav .hamburguer {
+    display: none;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    height: 100%;
+    display: inline-block;
+  }
+}
+
 nav ul li {
   display: inline-block;
   height: 100%;
